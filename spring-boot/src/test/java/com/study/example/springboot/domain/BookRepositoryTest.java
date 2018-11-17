@@ -40,7 +40,7 @@ public class BookRepositoryTest {
 		
 		repository.save(book);
 		
-		List<Book> books = repository.findByNameLike("boot-spring-boot");
+		List<Book> books = repository.findByNameLike("boot%");
 		for(Book bk : books) {
 			System.out.println("########## " + bk.getName() + ", " + bk.getIsbn10() + ", " +bk.getIsbn13() + ", " + bk.getId());
 		}
